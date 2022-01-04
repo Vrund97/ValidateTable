@@ -1,4 +1,4 @@
-// Name: Vrund Shah
+// Author: Vrund Shah
 // Date: January 04,2022
 // Description: Validate whether 2 tables are the same
 
