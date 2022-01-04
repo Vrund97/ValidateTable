@@ -33,7 +33,7 @@ public class ValidateTable {
 		List <WebElement> table1Content = driver.findElements(By.xpath("//*[@id=\"table1\"]/tbody/tr/td"));
 		List <WebElement> table2Content = driver.findElements(By.xpath("//*[@id=\"table2\"]/tbody/tr/td"));
 		
-		// Store header data in ArrayLists
+		// Store header values in ArrayLists
 		for(WebElement h1: header1) {
 			header1Values.add(h1.getText());
 		}
@@ -53,7 +53,7 @@ public class ValidateTable {
 		System.out.println("Table 1 header values: " + header1Values);
 		System.out.println("Table 2 header values: " + header2Values);
 		
-		// Validate Header data between 2 tables 
+		// Validate Header values between 2 tables 
 		boolean headerMatches = header1Values.equals(header2Values);
 		if(headerMatches) {
 			System.out.println("Header values match between two tables");
@@ -61,7 +61,7 @@ public class ValidateTable {
 			System.out.println("Header values does not match between two tables");	
 		}
 			
-		// Store header data in ArrayLists 
+		// Store table data in ArrayLists 
 		for(WebElement tab1: table1Content) {
 			table1Values.add(tab1.getText());
 		}
@@ -90,7 +90,7 @@ public class ValidateTable {
 		}
 		
 	
-		// Validation to ensure previous 2 data validations are successful  
+		// Validation to ensure previous 4 data validations are successful  
 		if(tableMatches && headerMatches &&(rowCountTable1.size()==rowCountTable2.size()) && header1.size()==header2.size()) {
 			System.out.println("The two tables are the same");
 		} else {
