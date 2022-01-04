@@ -8,7 +8,7 @@ Assumptions Made:
   2. Assertions packages etc were not to be used as instructions did not indicate as such
 
 The following validations were done:
-  1. Column Count
-  2. Row Count
+  1. Column Count Validation
+  2. Row Count Validation
   3. Header Value Validation
   4. Table Data Validation
