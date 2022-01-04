@@ -1,7 +1,7 @@
 # ValidateTable
 Selenium Testing to validate whether 2 tables are the same 
 
-Setup: Chrome driver is placed in a seperate folder (ChromeDriver) and path is configured as such to use in code. Chrome Version 96 was used for the solution and so chromedriver file might need to be replaced depending on Chrome Version. Selenium 3 was used for this solution.
+Setup: Chrome driver is placed in a seperate folder (ChromeDriver) and path is configured as such to use in code. Chrome Version 96 was used for the solution and so chromedriver file might need to be replaced depending on Chrome Version. Selenium 3 was configured and used for this solution.
 
 Assumptions Made:
   1. To check whether 2 tables are the same, table data was validated
