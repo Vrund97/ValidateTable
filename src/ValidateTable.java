@@ -21,8 +21,8 @@ public class ValidateTable {
 		
 		//Create Chrome Driver object and open webpage	
 		String driverLocation = System.getProperty("user.dir") + "/ChromeDriver/chromedriver.exe";
-	    System.setProperty("webdriver.chrome.driver",driverLocation);  
-        WebDriver driver = new ChromeDriver();
+	    	System.setProperty("webdriver.chrome.driver",driverLocation);  
+      		WebDriver driver = new ChromeDriver();
 		driver.get("https://the-internet.herokuapp.com/tables");
 		
 		// Locators to obtain information about the 2 tables (Example 1, Example 2) 
