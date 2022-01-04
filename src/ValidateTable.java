@@ -21,8 +21,8 @@ public class ValidateTable {
 		
 		//Create Chrome Driver object and open webpage	
 		String driverLocation = System.getProperty("user.dir") + "/ChromeDriver/chromedriver.exe";
-	    	System.setProperty("webdriver.chrome.driver",driverLocation);  
-      		WebDriver driver = new ChromeDriver();
+	    System.setProperty("webdriver.chrome.driver",driverLocation);  
+        WebDriver driver = new ChromeDriver();
 		driver.get("https://the-internet.herokuapp.com/tables");
 		
 		// Locators to obtain information about the 2 tables (Example 1, Example 2) 
@@ -44,6 +44,12 @@ public class ValidateTable {
 		// Display Header content 
 		System.out.println("Table 1 has " + header1.size()+" columns ");
 		System.out.println("Table 2 has " + header2.size()+ " columns");
+		
+		if(header1.size()==header2.size()) {
+			System.out.println("Column count is the same between the 2 tables");
+		}else {
+			System.out.println("Column count is not the same");
+		}
 		System.out.println("Table 1 header values: " + header1Values);
 		System.out.println("Table 2 header values: " + header2Values);
 		
@@ -66,6 +72,12 @@ public class ValidateTable {
 		// Display data content
 		System.out.println("Table 1 has " + rowCountTable1.size()+" rows");
 		System.out.println("Table 2 has " + rowCountTable2.size()+" rows");
+		
+		if(rowCountTable1.size()==rowCountTable2.size()) {
+			System.out.println("Row count is the same between the 2 tables");
+		}else {
+			System.out.println("Row count is not the same");
+		}
 		System.out.println("Table 1 values: " + table1Values);
 		System.out.println("Table 2 values: " + table2Values);
 		
@@ -79,7 +91,7 @@ public class ValidateTable {
 		
 	
 		// Validation to ensure previous 2 data validations are successful  
-		if(tableMatches && headerMatches) {
+		if(tableMatches && headerMatches &&(rowCountTable1.size()==rowCountTable2.size()) && header1.size()==header2.size()) {
 			System.out.println("The two tables are the same");
 		} else {
 			System.out.println("The two tables are not the same");
@@ -89,3 +101,4 @@ public class ValidateTable {
 	}
 
 }
+
